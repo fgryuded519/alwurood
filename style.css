@@ -1,34 +1,54 @@
 
 body {
-    font-family: 'Tahoma', sans-serif;
-    background: linear-gradient(to right, #ffecd2, #fcb69f);
+    font-family: 'Cairo', sans-serif;
+    background: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
     margin: 0;
     padding: 0;
-    text-align: center;
+    direction: rtl;
 }
-.login-container, .stream-container {
+.container {
+    max-width: 600px;
+    margin: auto;
     padding: 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+h1, h2 {
+    text-align: center;
+    color: #e91e63;
+}
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+.login-form label, .login-form input, .login-form button {
+    margin: 10px 0;
 }
 input {
     padding: 10px;
-    margin: 10px;
-    width: 80%;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 button {
-    padding: 10px 20px;
-    background: #ff6f61;
+    padding: 10px;
+    background-color: #e91e63;
     color: white;
     border: none;
     border-radius: 5px;
+    cursor: pointer;
 }
-.chat-box {
-    background: white;
-    padding: 10px;
+button:hover {
+    background-color: #c2185b;
+}
+.chat-section {
     margin-top: 20px;
 }
-.messages {
-    height: 100px;
-    overflow-y: scroll;
-    border: 1px solid #ccc;
-    margin-bottom: 10px;
+.chat-box {
+    background-color: #fce4ec;
+    padding: 10px;
+    border-radius: 10px;
+    max-height: 200px;
+    overflow-y: auto;
 }
